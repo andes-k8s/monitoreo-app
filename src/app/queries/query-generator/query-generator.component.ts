@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewEncapsulation, QueryList, ViewChildren } from '@angular/core';
 import { Plex } from '@andes/plex';
 import { IFiltroQuery } from '../interfaces/IFiltroQuery.interface';
-import { QueriesGeneratorService } from '../services/query-generator-service';
+import { QueriesGeneratorService } from '../services/query-generator.service';
 import { FiltroQueryComponent } from '../filtros/filtros.query.component';
 
 @Component({
@@ -56,7 +56,7 @@ export class QueryComponent implements OnInit {
   descargarCSV() {
     if (this.selectConsulta && this.mostrarBoton()) {
       if (this.verificarFechas()) {
-        this.biService.descargar(this.selectConsulta);
+        this.biService.descargar(this.selectConsulta, {});
       }
     }
   }

@@ -9,7 +9,7 @@ import { QueryComponent } from './query-generator/query-generator.component';
 import { FechaComponent } from './filtros/fecha/fecha.component';
 import { FiltroQueryComponent } from './filtros/filtros.query.component';
 import { ValorNumericoComponent } from './filtros/valor-numerico/valor-numerico.component';
-import { QueriesGeneratorService } from './services/query-generator-service';
+import { QueriesGeneratorService } from './services/query-generator.service';
 import { QueriesRoutingModule } from 'src/app/queries/queries-routing.module';
 
 @NgModule({
