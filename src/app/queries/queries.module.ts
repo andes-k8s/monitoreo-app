@@ -5,15 +5,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { PlexModule } from '@andes/plex';
 
 // components
-import { QueryComponent } from './query-generator/query-generator.component';
-import { FechaComponent } from './filtros/fecha/fecha.component';
-import { FiltroQueryComponent } from './filtros/filtros.query.component';
-import { ValorNumericoComponent } from './filtros/valor-numerico/valor-numerico.component';
+import { QueryExecuteComponent } from './componentes/query-execute.component';
 import { QueriesGeneratorService } from './services/query-generator.service';
 import { QueriesRoutingModule } from 'src/app/queries/queries-routing.module';
+import { OrganizacionService } from 'src/app/services/organizacion.service';
 
 @NgModule({
-  declarations: [QueryComponent, FiltroQueryComponent, FechaComponent, ValorNumericoComponent],
+  declarations: [
+    QueryExecuteComponent
+  ],
   imports: [
     CommonModule,
     FormsModule,
@@ -21,7 +21,7 @@ import { QueriesRoutingModule } from 'src/app/queries/queries-routing.module';
     PlexModule,
     QueriesRoutingModule
   ],
-  providers: [QueriesGeneratorService],
-  entryComponents: [FechaComponent, ValorNumericoComponent]
+  providers: [QueriesGeneratorService, OrganizacionService],
+  entryComponents: []
 })
 export class QueriesModule { }

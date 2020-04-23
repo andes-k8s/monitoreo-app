@@ -7,12 +7,12 @@ import { saveAs } from 'file-saver';
 
 import { Server } from '@andes/shared';
 
-import { environment } from 'src/environments/environment';
 import { Options } from '@andes/shared/src/lib/server/options';
 import { Plex } from '@andes/plex';
 
 import * as moment from 'moment';
 import { IFiltroQuery } from '../interfaces/IFiltroQuery.interface';
+import { environment } from '../../../environments/environment';
 
 
 // Constantes
@@ -33,20 +33,29 @@ export class QueriesGeneratorService {
             'Content-Type': 'application/json',
             Authorization: window.sessionStorage.getItem('jwt') ? 'JWT ' + window.sessionStorage.getItem('jwt') : null
         });
-        const options: any = { headers: header, responseType: 'blob' };
+        const options: any = { headers: header };
         const res = this.server.get(`${this.biUrl}/queries`, options);
         return res;
     }
 
     descargar(consulta: IFiltroQuery, params) {
+        params = {
+            desde: '2019-01-31',
+            hasta: '2020-03-30'
+        }
+        // params = {
+        //     desde: moment(new Date()).startOf('d').format(),
+        //     hasta: moment(new Date()).endOf('d').format(),
+        // };
         const nombre = consulta.nombre || 'consulta';
-        const header: any = new HttpHeaders({
+      
+        const header = new HttpHeaders({
             'Content-Type': 'application/json',
             Authorization: window.sessionStorage.getItem('jwt') ? 'JWT ' + window.sessionStorage.getItem('jwt') : null
         });
 
-        const options: any = { headers: header, responseType: 'blob', params };
-        return this.http.get(`${environment.API}/bi/queries/${nombre}/csv`, options);
-
+        
+        const options: any = { params };
+        return this.server.get(`${environment.API}/bi/queries/${nombre}/csv`, options);
     }
 }
