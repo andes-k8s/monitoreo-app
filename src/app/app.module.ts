@@ -30,6 +30,10 @@ import { WebhookLogComponent } from './webhook-log/webhook-log.component';
 import { WebhookLogService } from './webhook-log/services/webhook-log.service';
 import { QueriesModule } from './queries/queries.module';
 import { CdaModule } from './cda/cda.module';
+import { RUPElementosRupListadoComponent } from './rupers/elementos-rup-listado/elementos-rup-listado.component';
+import { RUPSeccionCreateUpdateComponent } from './rupers/seccion-create-update/seccion-create-update.component';
+import { RUPPrestacionCreateUpdateComponent } from './rupers/prestacion-create-update/prestacion-create-update.component';
+
 
 import { NovedadesModule } from './registro-novedades/novedades.module';
 
@@ -43,7 +47,10 @@ import { NovedadesModule } from './registro-novedades/novedades.module';
     DetalleConceptoTurneableComponent,
     NuevoConceptoTurneableComponent,
     MonitoreoActivacionesComponent,
-    BuscadorSnomedComponent
+    BuscadorSnomedComponent,
+    RUPElementosRupListadoComponent,
+    RUPSeccionCreateUpdateComponent,
+    RUPPrestacionCreateUpdateComponent
   ],
   imports: [
     BrowserModule,
