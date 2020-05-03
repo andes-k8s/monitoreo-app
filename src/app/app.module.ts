@@ -33,6 +33,7 @@ import { CdaModule } from './cda/cda.module';
 import { RUPElementosRupListadoComponent } from './rupers/elementos-rup-listado/elementos-rup-listado.component';
 import { RUPSeccionCreateUpdateComponent } from './rupers/seccion-create-update/seccion-create-update.component';
 import { RUPPrestacionCreateUpdateComponent } from './rupers/prestacion-create-update/prestacion-create-update.component';
+import { RUPAtomoCreateUpdateComponent } from './rupers/atomo-create-update/atomo-create-update.component';
 
 
 import { NovedadesModule } from './registro-novedades/novedades.module';
@@ -50,7 +51,8 @@ import { NovedadesModule } from './registro-novedades/novedades.module';
     BuscadorSnomedComponent,
     RUPElementosRupListadoComponent,
     RUPSeccionCreateUpdateComponent,
-    RUPPrestacionCreateUpdateComponent
+    RUPPrestacionCreateUpdateComponent,
+    RUPAtomoCreateUpdateComponent
   ],
   imports: [
     BrowserModule,
