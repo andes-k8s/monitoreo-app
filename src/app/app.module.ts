@@ -20,7 +20,6 @@ import { ConceptosTurneablesComponent } from './conceptos-turneables/components/
 import { ConceptoTruneableService } from './conceptos-turneables/services/concepto-turneable.service';
 import { DetalleConceptoTurneableComponent } from './conceptos-turneables/components/detalle-concepto-turneable.component';
 import { NuevoConceptoTurneableComponent } from './conceptos-turneables/components/nuevo-concepto-turneable.component';
-import { SnomedService } from './shared/snomed.service';
 import { BuscadorSnomedComponent } from './buscador-snomed/buscador-snomed.component';
 import { MonitoreoActivacionesComponent } from './monitor-activaciones/monitoreo-activaciones.component';
 import { PacienteAppService } from './monitor-activaciones/services/pacienteApp.service';
@@ -30,11 +29,6 @@ import { WebhookLogComponent } from './webhook-log/webhook-log.component';
 import { WebhookLogService } from './webhook-log/services/webhook-log.service';
 import { QueriesModule } from './queries/queries.module';
 import { CdaModule } from './cda/cda.module';
-import { RUPElementosRupListadoComponent } from './rupers/elementos-rup-listado/elementos-rup-listado.component';
-import { RUPSeccionCreateUpdateComponent } from './rupers/seccion-create-update/seccion-create-update.component';
-import { RUPPrestacionCreateUpdateComponent } from './rupers/prestacion-create-update/prestacion-create-update.component';
-import { RUPAtomoCreateUpdateComponent } from './rupers/atomo-create-update/atomo-create-update.component';
-import { RUPMoleculaCreateUpdateComponent } from './rupers/molecula-create-update/molecula-create-update.component';
 
 
 import { NovedadesModule } from './registro-novedades/novedades.module';
@@ -50,11 +44,7 @@ import { NovedadesModule } from './registro-novedades/novedades.module';
     NuevoConceptoTurneableComponent,
     MonitoreoActivacionesComponent,
     BuscadorSnomedComponent,
-    RUPElementosRupListadoComponent,
-    RUPSeccionCreateUpdateComponent,
-    RUPPrestacionCreateUpdateComponent,
-    RUPAtomoCreateUpdateComponent,
-    RUPMoleculaCreateUpdateComponent
+
   ],
   imports: [
     BrowserModule,
@@ -78,7 +68,6 @@ import { NovedadesModule } from './registro-novedades/novedades.module';
     RoutingNavBar,
     WebHookService,
     ConceptoTruneableService,
-    SnomedService,
     PacienteAppService,
     OrganizacionService,
     SendMessageCacheService,
