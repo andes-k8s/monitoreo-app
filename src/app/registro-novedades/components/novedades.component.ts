@@ -97,7 +97,7 @@ export class NovedadesComponent implements OnInit {
       fecha: new Date(),
       descripcion: '',
       imagenes: [],
-      modulo: this.listModulos[0],
+      modulo: null,
       activa: true
     };
   }
@@ -230,7 +230,7 @@ export class NovedadesComponent implements OnInit {
   getFotos() {
     if (this.regNov && this.regNov.imagenes) {
       return this.regNov.imagenes.map((doc: any) => {
-        doc = {...doc};
+        doc = { ...doc };
         doc.url = this.createUrl(doc);
         return doc;
       });
